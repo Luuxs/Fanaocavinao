@@ -574,6 +574,4 @@ window.addEventListener('resize', () => {
       if (consecutiveHits >= HITS_NEEDED) showOverlay(true);
     }, 500);
   }
-});
 })();
-
