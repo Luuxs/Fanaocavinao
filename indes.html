@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Feliz Día de la Novia 💗</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Enlace a tu archivo CSS externo -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Librería Three.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+
+  <div id="start-screen">
+    <div class="pulse-text">Toca para iniciar</div>
+    <div class="start-heart" aria-hidden="true">❤️</div>
+  </div>
+
+  <div id="top-title">Feliz día de la novia 💗</div>
+
+  <button id="love-letter-btn" aria-label="Leer mensaje">💌</button>
+
+  <div id="love-letter-overlay">
+    <div id="love-letter-card">
+      <button id="love-letter-close" aria-label="Cerrar mensaje">✕</button>
+      <h2>Feliz día de la novia ❤️</h2>
+      <p class="signoff">Mi novia,</p>
+      <p class="signoff">Con la certeza de que nos volveremos a encontrar ♥</p>
+      <p class="signoff">Para ti, Naomi:</p>
+      <p>Hay personas que cambian tu vida para siempre, y tú lo hiciste de la forma más hermosa. Gracias por estos tres meses increíbles y por escucharme. Conectar contigo me enseñó lo que realmente significa sentirse amado incondicionalmente, y me enamoré de cada parte de ti: de tu forma de ser, de tus palabras y de la luz que traes a mis días.</p>
+      <p>Este no es un adiós, sino un hasta luego cargado de la fe más firme. Sé que el tiempo pasa volando a tu lado y mantengo la certeza absoluta de que esos momentos volverán.</p>
+      <p>  El amor verdadero sabe esperar y sabe luchar; por eso, hoy decido trabajar fuertemente en mí, crecer y convertirme en el hombre que te merece.
+
+Me quedo guardadas en el alma tus frases que me marcaron para siempre: ama a tu prójimo como a ti mismo y el amor lo puede todo. No me rindo ni perderé la fe en nosotros ni en ese futuro que tanto anhelo a tu lado para cuando la vida nos vuelva a cruzar. Sigue escribiendo tu historia, mi hermosa comunicadora. Prometo luchar por nuestro reencuentro; nos vemos pronto.</p>
+    </div>
+  </div>
+
+  <canvas id="c"></canvas>
+
+  <audio id="audio" loop src="https://cdn.jsdelivr.net/gh/JosephCC123/REPO-FOTOS@main/freegalaxy-dia-novia/sound.mp3" preload="auto"></audio>
+
+  <!-- Enlace a tu archivo JavaScript externo -->
+  <script src="js/script.js"></script>
+
+</body>
+</html>
