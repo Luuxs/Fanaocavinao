@@ -1,19 +1,24 @@
 // ================= Inicio =================
 const startScreen = document.getElementById('start-screen');
 const audio = document.getElementById('audio');
-audio.preload = 'auto';
-audio.load();
+if (audio) {
+  audio.preload = 'auto';
+  audio.load();
+}
 
 let experienceStarted = false;
 function unlockAudioAndStart() {
   if (experienceStarted) return;
   experienceStarted = true;
-  const playPromise = audio.play();
-  if (playPromise && typeof playPromise.catch === 'function') {
-    playPromise.catch(err => console.log("Audio no autoplay:", err));
+  if (audio) {
+    const playPromise = audio.play();
+    if (playPromise && typeof playPromise.catch === 'function') {
+      playPromise.catch(err => console.log("Audio no autoplay:", err));
+    }
   }
   startScreen.classList.add('hidden');
 }
+
 startScreen.addEventListener('touchend', (e) => {
   e.preventDefault();
   unlockAudioAndStart();
@@ -240,8 +245,8 @@ const baseWords = [
   'Contigo por siempre 💞',
   'Mi corazón es tuyo 💓',
   'Eres mi lugar favorito 🏠',
-   'Gracias por existir  🏠',
-    'Soy tuyo mi Nao 💓'
+  'Gracias por existir 🏠',
+  'Soy tuyo mi Nao 💓'
 ];
 
 const PHRASE_REPEAT = isMobile ? 11 : 16;
