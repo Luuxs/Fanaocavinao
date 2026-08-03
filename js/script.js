@@ -575,3 +575,12 @@ window.addEventListener('resize', () => {
     }, 500);
   }
 })();
+const startScreen = document.getElementById('start-screen');
+const audio = document.getElementById('audio');
+
+startScreen.addEventListener('click', () => {
+    audio.play().catch(error => {
+        console.log("Error al reproducir audio:", error);
+    });
+    startScreen.style.display = 'none'; // oculta la pantalla de inicio
+});
